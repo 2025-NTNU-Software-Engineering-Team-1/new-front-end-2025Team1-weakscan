@@ -5,7 +5,6 @@ const {
 
 module.exports = {
   darkMode: ["class", "[data-theme=dark]"],
-  // Make sure you require daisyui AFTER @tailwindcss/typography in tailwind.config.js
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   daisyui: {

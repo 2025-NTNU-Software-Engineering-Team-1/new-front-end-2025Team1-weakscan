@@ -84,7 +84,7 @@ async function submit() {
       <problem-multi-select
         :model-value="form.problemIds"
         :problems="problemSelections"
-        @update:model-value="(v) => updateForm('problemIds', v)"
+        @update:model-value="(v: any) => updateForm('problemIds', v)"
       />
       <label class="label" v-show="v$.problemIds.$error">
         <span class="label-text-alt text-error" v-text="v$.problemIds.$errors[0]?.$message" />

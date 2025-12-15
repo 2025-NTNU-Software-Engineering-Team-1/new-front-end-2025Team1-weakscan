@@ -201,14 +201,14 @@ watch(
       </label>
       <language-multi-select
         :model-value="problem.allowedLanguage"
-        @update:model-value="(newValue) => update('allowedLanguage', newValue)"
+        @update:model-value="(newValue: any) => update('allowedLanguage', newValue)"
       />
       <label class="label" v-show="v$.allowedLanguage.$error">
         <span class="label-text-alt text-error" v-text="v$.allowedLanguage.$errors[0]?.$message" />
       </label>
     </div>
 
-    <ProblemDescriptionForm :v$="v$" @update="(...args) => update(...args)" />
+    <ProblemDescriptionForm :v$="v$" @update="update" />
 
     <template v-if="problem.type !== 2">
       <div class="form-control col-span-2 w-full">

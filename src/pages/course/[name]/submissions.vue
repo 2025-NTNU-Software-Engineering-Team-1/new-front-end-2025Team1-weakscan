@@ -149,7 +149,7 @@ async function downloadAllSubmissions() {
           <select
             :value="routeQuery.filter.problemId"
             class="select select-bordered w-full flex-1"
-            @change="(event) => mutateFilter({ problemId: (event.target as HTMLSelectElement).value})"
+            @change="(event) => mutateFilter({ problemId: (event.target as HTMLSelectElement).value })"
           >
             <option value="" selected>{{ $t("course.submissions.problem") }}</option>
             <option v-for="{ text, value } in problemSelections" :value="value">{{ text }}</option>
@@ -158,7 +158,7 @@ async function downloadAllSubmissions() {
           <select
             :value="routeQuery.filter.status"
             class="select select-bordered w-full flex-1"
-            @change="(event) => mutateFilter({ status: (event.target as HTMLSelectElement).value})"
+            @change="(event) => mutateFilter({ status: (event.target as HTMLSelectElement).value })"
           >
             <option value="" selected>{{ $t("course.submissions.status") }}</option>
             <option v-for="{ text, value } in submissionStatusCodes" :value="value">{{ text }}</option>
@@ -167,7 +167,7 @@ async function downloadAllSubmissions() {
           <select
             :value="routeQuery.filter.languageType"
             class="select select-bordered w-full flex-1"
-            @change="(event) => mutateFilter({ languageType: (event.target as HTMLSelectElement).value})"
+            @change="(event) => mutateFilter({ languageType: (event.target as HTMLSelectElement).value })"
           >
             <option value="" selected>{{ $t("course.submissions.lang") }}</option>
             <option v-for="{ text, value } in languageTypes" :value="value">{{ text }}</option>
